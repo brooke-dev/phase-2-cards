@@ -15,7 +15,7 @@ function YugiohCardContainer({yugioh}){
     ))
 
     return(
-        <div className="cards">
+        <div className="yugiohCards">
             {renderYugiohCards}
         </div>
         

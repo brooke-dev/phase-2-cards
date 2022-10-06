@@ -36,9 +36,8 @@ function NewPokemonCardForm({handleAddCard}) {
         <input type="text" name="comment" placeholder="Comment" value={cardComment}
         onChange={(e) => setCardComment(e.target.value)}
         />
-        <button type="submit">Add Card</button>
-        {/* <button className="btn2" type="submit">Add Card</button> */}
-      
+
+        <button type="submit" className="subBtn">Add Card</button>
       </form>
     </div>
   );
