@@ -16,7 +16,32 @@ function Search({searchBar,setSearchBar,}){
             value={searchBar}
             onChange={handleChangeSortBy}
             />
+
+            
+
+            {/* <label htmlFor="sort">Pokemon</label>
+            <input id="sort"
+            type="checkbox"
+            checked={renderCheckedPokemonCards}
+            onChange={handlePokemonClick}
+            />
+            
+            <label htmlFor="sort">Magic</label>
+            <input id="sort"
+            type="checkbox"
+            checked={renderCheckedMagicCards}
+            onChange={handleMagicClick}
+            />
+
+            <label htmlFor="sort">Yu-Gi-Oh!</label>
+            <input id="sort"
+            type="checkbox"
+            checked={renderCheckedYugiohCards}
+            onChange={handleYugiohClick}
+            />             */}
+
             {/* <button type="submit" className="submitButton">🔍</button> */}
+
         </form>
         </div>
 
