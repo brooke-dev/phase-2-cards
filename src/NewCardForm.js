@@ -36,7 +36,7 @@ function NewCardForm({handleAddCard}) {
         <input type="text" name="comment" placeholder="Comment" value={cardComment}
         onChange={(e) => setCardComment(e.target.value)}
         />
-        <button className="btn" type="submit">Add Card</button>
+        <button type="submit">Add Card</button>
         <button className="btn2" type="submit">Add Card</button>
       
       </form>

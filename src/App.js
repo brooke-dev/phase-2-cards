@@ -8,7 +8,11 @@ import Favorites from "./NavBarFolder/Favorites"
 import Home from "./NavBarFolder/Home"
 import Search from "./SearchFolder/Search"
 import NewCardForm from './NewCardForm';
+
 import AllCards from './AllCardsFolder/AllCards';
+import MagicCardContainer from "./AllCardsFolder/MagicFolder/MagicCardContainer.js";
+import PokemonCardContainer from "./AllCardsFolder/PokemonFolder/PokemonCardContainer";
+import YugiohCardContainer from "./AllCardsFolder/YugiohFolder/YugiohCardContainer"
 
 
 function App() {
@@ -134,9 +138,6 @@ function handleAddCard(newPokemonCard) {
           <Route path = "/about">
             <About />
           </Route>
-          <Route path = "/favorites">
-            <Favorites />
-          </Route>
           <Route eact path = "/">
             <Home />
           </Route>
@@ -148,6 +149,32 @@ function handleAddCard(newPokemonCard) {
       </header>
 
       <div>
+        <div>
+        <AllCards/>
+          <Switch>
+            <Route path ="/Pokemon">
+              <PokemonCardContainer 
+              pokemon={pokemon}
+              renderCheckedPokemonCards={renderCheckedPokemonCards}
+              />
+            </Route>
+            <Route path="/Magic">
+              <MagicCardContainer 
+              magic={magic}
+              renderCheckedMagicCards={renderCheckedMagicCards}
+              />
+            </Route>
+            <Route path="/YuGiOh">
+              <YugiohCardContainer 
+              yugioh={yugioh}
+              renderCheckedYugiohCards={renderCheckedYugiohCards}
+              />
+            </Route>
+            <Route path ="*">
+              <h1>404 not found</h1>
+            </Route>
+          </Switch>
+        </div>
       
         <NewCardForm handleAddCard={handleAddCard}/>
         
@@ -168,15 +195,6 @@ function handleAddCard(newPokemonCard) {
           setRenderCheckedYugiohCards={setRenderCheckedYugiohCards}
          
           />
-        <AllCards
-        renderCheckedPokemonCards={renderCheckedPokemonCards} 
-        renderCheckedMagicCards={renderCheckedMagicCards}
-        renderCheckedYugiohCards={renderCheckedYugiohCards}
-        pokemon={sortedPokemon} 
-        magic={sortedMagic} 
-        yugioh={sortedYugioh}
-        />
-
       </div>
 
     </div>
