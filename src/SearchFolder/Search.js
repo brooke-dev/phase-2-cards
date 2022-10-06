@@ -19,21 +19,21 @@ function Search({setRenderCheckedPokemonCards,
     setSearchBar(event.target.value)
    }
 
-   function handlePokemonClick(event){
-    setRenderCheckedPokemonCards(event.target.checked)
-   }
+//    function handlePokemonClick(event){
+//     setRenderCheckedPokemonCards(event.target.checked)
+//    }
 
-   function handleYugiohClick(event){
-    setRenderCheckedYugiohCards(event.target.checked)
-   }
+//    function handleYugiohClick(event){
+//     setRenderCheckedYugiohCards(event.target.checked)
+//    }
 
-   function handleMagicClick(event){
-    setRenderCheckedMagicCards(event.target.checked)
-   }
+//    function handleMagicClick(event){
+//     setRenderCheckedMagicCards(event.target.checked)
+//    }
 
-   function handlePokedexClick(event){
-    setPokemonSort(event.target.checked)
-   }
+//    function handlePokedexClick(event){
+//     setPokemonSort(event.target.checked)
+//    }
 
 
     return (
@@ -49,7 +49,7 @@ function Search({setRenderCheckedPokemonCards,
             />
             <button type="submit" className="submitButton">🔍</button>
 
-            <label htmlFor="sort">Pokemon</label>
+            {/* <label htmlFor="sort">Pokemon</label>
             <input id="sort"
             type="checkbox"
             checked={renderCheckedPokemonCards}
@@ -68,16 +68,16 @@ function Search({setRenderCheckedPokemonCards,
             type="checkbox"
             checked={renderCheckedYugiohCards}
             onChange={handleYugiohClick}
-            />            
+            />             */}
         </form>
-        <form className="pokedex">
+        {/* <form className="pokedex">
             <label htmlFor="sort">Pokedex Number!</label>
                 <input id="sort"
                 type="checkbox"
                 checked={pokemonSort}
                 onChange={handlePokedexClick}
                 />
-        </form>
+        </form> */}
 
         </div>
 
