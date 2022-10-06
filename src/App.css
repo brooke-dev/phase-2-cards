@@ -467,5 +467,12 @@ header h1 a:hover {
 }
 
 .magicLink {
-  position: relative; left: 65%; top: 
+  position: relative; left: 65%; top: 70%
+}
+
+.logo{
+  position: absolute;
+  top:0;
+  right:0;
+  width:5%;
 }

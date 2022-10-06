@@ -2,12 +2,12 @@ import './App.css';
 import React,{useState,useEffect} from "react";
 import {Switch, Route} from "react-router-dom"
 import axios from "axios";
+
 import NavBar from "./NavBarFolder/NavBar.js"
 import About from "./NavBarFolder/About.js"
-import Favorites from "./NavBarFolder/Favorites"
 import Home from "./NavBarFolder/Home"
-import Search from "./SearchFolder/Search"
 
+import Search from "./SearchFolder/Search"
 
 import AllCards from './AllCardsFolder/AllCards';
 import MagicCardContainer from "./AllCardsFolder/MagicFolder/MagicCardContainer.js";
@@ -22,6 +22,9 @@ import PokemonSort from "./AllSortFolder/PokemonSort"
 import MagicSort from "./AllSortFolder/MagicSort"
 import YugiohSort from "./AllSortFolder/YugiohSort"
 
+import logo from "./logoHouse.png"
+import logo2 from "./2.png"
+
 
 function App() {
 
@@ -29,10 +32,6 @@ function App() {
   const [pokemonSort,setPokemonSort]=useState(false)
   const [magicSort,setMagicSort]=useState(false)
   const [yugiohSort,setYugiohSort]=useState(false)
-
-  const [renderCheckedPokemonCards,setRenderCheckedPokemonCards]=useState(false)
-  const [renderCheckedMagicCards, setRenderCheckedMagicCards]=useState(false)
-  const [renderCheckedYugiohCards,setRenderCheckedYugiohCards]=useState (false)
 
   const [pokemon, setPokemon] = useState([])
   const [magic, setMagic] = useState([])
@@ -89,15 +88,6 @@ function App() {
     }
   ): filteredPokemonCards
 
-  // const checkedPokemonBox=pokemon.filter((pokemonCards)=>(pokemon ? (pokemonCards['card-franchise']) : true)).sort((pokemon1,pokemon2)=>{
-  //   if(sort === "pokemon"){
-  //     return pokemon1.id-pokemon2.id
-  //   }else {
-  //     return pokemon1.name.localCompare(pokemon2.name)
-  //   }
-  // })
-
-
   const filteredMagicCards=magic.filter((oneMagicCard)=>{
     if(oneMagicCard.name.toLowerCase().includes(searchBar.toLowerCase())){
       return(true)
@@ -147,10 +137,14 @@ function App() {
   }
 
   return (
+    
     <div className="App">
+      
       <header className="App-header">
+       
          <nav>
         <NavBar />
+        <img className="logo" src= {logo2} alt="logo!"/> 
         <Switch>
           <Route path = "/about">
             <About />
@@ -172,22 +166,11 @@ function App() {
             <Route path ="/Pokemon">
               <PokemonCardContainer 
               pokemon={sortedPokemon}
-              renderCheckedPokemonCards={renderCheckedPokemonCards}
               />
       
               <Search 
               searchBar={searchBar} 
               setSearchBar={setSearchBar} 
-              // pokemonSort={pokemonSort}
-              // setPokemonSort={setPokemonSort}
-              yugiohSort={yugiohSort}
-              setYugiohSort={setYugiohSort}
-              renderCheckedPokemonCards={renderCheckedPokemonCards}
-              setRenderCheckedPokemonCards={setRenderCheckedPokemonCards}
-              renderCheckedMagicCards={renderCheckedMagicCards}
-              setRenderCheckedMagicCards={setRenderCheckedMagicCards}
-              renderCheckedYugiohCards={renderCheckedYugiohCards}
-              setRenderCheckedYugiohCards={setRenderCheckedYugiohCards}
               />
               <PokemonSort pokemonSort={pokemonSort} setPokemonSort={setPokemonSort} />
               <NewPokemonCardForm handleAddCard={handleAddCard}/>             
@@ -198,19 +181,10 @@ function App() {
             <Route path="/Magic">
               <MagicCardContainer 
               magic={sortedMagic}
-              renderCheckedMagicCards={renderCheckedMagicCards}
               />
               <Search 
               searchBar={searchBar} 
               setSearchBar={setSearchBar} 
-              magicSort={magicSort}
-              setMagicSort={setMagicSort}
-              renderCheckedPokemonCards={renderCheckedPokemonCards}
-              setRenderCheckedPokemonCards={setRenderCheckedPokemonCards}
-              renderCheckedMagicCards={renderCheckedMagicCards}
-              setRenderCheckedMagicCards={setRenderCheckedMagicCards}
-              renderCheckedYugiohCards={renderCheckedYugiohCards}
-              setRenderCheckedYugiohCards={setRenderCheckedYugiohCards}
               />
               <MagicSort magicSort={magicSort} setMagicSort={setMagicSort} />
               <NewMagicCardForm handleAddCard={handleAddMagicCard}/>
@@ -219,27 +193,14 @@ function App() {
             <Route path="/YuGiOh">
               <YugiohCardContainer 
               yugioh={sortedYugioh}
-              renderCheckedYugiohCards={renderCheckedYugiohCards}
               />
               <Search 
               searchBar={searchBar} 
               setSearchBar={setSearchBar} 
-              yugiohSort={yugiohSort}
-              setYugiohSort={setYugiohSort}
-              renderCheckedPokemonCards={renderCheckedPokemonCards}
-              setRenderCheckedPokemonCards={setRenderCheckedPokemonCards}
-              renderCheckedMagicCards={renderCheckedMagicCards}
-              setRenderCheckedMagicCards={setRenderCheckedMagicCards}
-              renderCheckedYugiohCards={renderCheckedYugiohCards}
-              setRenderCheckedYugiohCards={setRenderCheckedYugiohCards}
               />
               <YugiohSort yugiohSort={yugiohSort} setYugiohSort={setYugiohSort} />
               <NewYugiohCardForm handleAddCard={handleAddYugiohCard} />
             </Route>
-
-            {/* <Route path ="*">
-              <h1>404 not found</h1>
-            </Route> */}
           </Switch>
         </div>
   
