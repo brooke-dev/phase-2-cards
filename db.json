@@ -31,16 +31,10 @@
       "card-rarity": "common"
     },
     {
-      "name": "",
-      "image": "",
-      "comment": "",
+      "name": "Caterpie",
+      "image": "https://m.media-amazon.com/images/I/51Gp9wiumLL._AC_SY580_.jpg",
+      "comment": "I love bugs! Too Cute!",
       "id": 4
-    },
-    {
-      "name": "",
-      "image": "",
-      "comment": "",
-      "id": 5
     }
   ],
   "Magic-the-Gathering": [
