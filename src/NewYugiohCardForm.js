@@ -4,8 +4,10 @@ function NewYugiohCardForm({handleAddCard}) {
   const [cardName, setCardName] = useState("")
   const [cardImage, setCardImage] = useState("")
   const [cardComment, setCardComment] = useState("")
+  const [cardType, setCardType] = useState("")
+  const [cardRarity, setCardRarity] = useState("")
   
-  // console.log({ cardName, cardImage, cardComment })
+   console.log({ cardRarity, cardImage, cardComment })
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -18,6 +20,8 @@ function NewYugiohCardForm({handleAddCard}) {
             name: cardName,
             image: cardImage,
             comment: cardComment,
+            ["card-type"]: cardType,
+            ["card-rarity"]: cardRarity,
         })
   })
   .then(r => r.json())
@@ -33,9 +37,16 @@ function NewYugiohCardForm({handleAddCard}) {
         <input type="text" name="image" placeholder="Image URL" value={cardImage} 
         onChange={(e) => setCardImage(e.target.value)}
         />
+        <input type="text" name="card-type" placeholder="Card type" value={cardType} 
+        onChange={(e) => setCardType(e.target.value)}
+        />
+        <input type="text" name="card-rarity" placeholder="Card rarity" value={cardRarity}
+        onChange={(e) => setCardRarity(e.target.value)}
+        />
         <input type="text" name="comment" placeholder="Comment" value={cardComment}
         onChange={(e) => setCardComment(e.target.value)}
         />
+        
         <button type="submit">Add Card</button>
         {/* <button className="btn2" type="submit">Add Card</button> */}
       

@@ -4,8 +4,11 @@ function NewPokemonCardForm({handleAddCard}) {
   const [cardName, setCardName] = useState("")
   const [cardImage, setCardImage] = useState("")
   const [cardComment, setCardComment] = useState("")
+  const [pokeNumber, setPokeNumber] = useState("")
+  const [cardType, setCardType] = useState("")
+  const [cardRarity, setCardRarity] = useState("")
   
-  // console.log({ cardName, cardImage, cardComment })
+   console.log({ cardRarity, cardImage, cardComment })
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -18,6 +21,10 @@ function NewPokemonCardForm({handleAddCard}) {
             name: cardName,
             image: cardImage,
             comment: cardComment,
+            ["pokedex-number"]: pokeNumber,
+            ["pokemon-type"]: cardType,
+            ["card-rarity"]: cardRarity,
+
         })
   })
   .then(r => r.json())
@@ -32,6 +39,15 @@ function NewPokemonCardForm({handleAddCard}) {
         />
         <input type="text" name="image" placeholder="Image URL" value={cardImage} 
         onChange={(e) => setCardImage(e.target.value)}
+        />
+        <input type="text" name="pokedex-no" placeholder="Pokedex number(000)" value={pokeNumber}
+        onChange={(e) => setPokeNumber(e.target.value)}
+        />
+        <input type="text" name="pokemon-type" placeholder="Pokemon type" value={cardType}
+        onChange={(e) => setCardType(e.target.value)}
+        />
+        <input type="text" name="card-rarity" placeholder="Card rarity" value={cardRarity}
+        onChange={(e) => setCardRarity(e.target.value)}
         />
         <input type="text" name="comment" placeholder="Comment" value={cardComment}
         onChange={(e) => setCardComment(e.target.value)}
