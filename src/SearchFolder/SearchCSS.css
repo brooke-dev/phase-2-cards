@@ -1,4 +1,4 @@
-.searchbar {
+/* .searchbar {
     flex: 1 1 auto;
     margin: 0 1rem;
     display: flex;
@@ -37,11 +37,11 @@
     border: 1px solid #ccc;
     border-radius: 3px;
     padding-left: 0.5rem;
-  }
+  } */
   
-  .pokedex button {
+  /* .pokedex button {
     padding: 0 0.25rem;
     background: white;
     border: 1px solid #ccc;
     border-radius: 3px;
-  }
+  } */
