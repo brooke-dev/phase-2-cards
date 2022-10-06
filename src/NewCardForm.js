@@ -9,8 +9,20 @@ function NewCardForm({handleAddCard}) {
 
   function handleSubmit(e) {
     e.preventDefault()
-    handleAddCard(e)
-  }
+    fetch("http://localhost:4000/Pokemon", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+    },
+        body: JSON.stringify({
+            name: cardName,
+            image: cardImage,
+            comment: cardComment,
+        })
+  })
+  .then(r => r.json())
+  .then((newPokemonCard) => handleAddCard(newPokemonCard))
+}
   return (
     <div className="new-card-form">
       <h2>New Card</h2>
@@ -24,7 +36,9 @@ function NewCardForm({handleAddCard}) {
         <input type="text" name="comment" placeholder="Comment" value={cardComment}
         onChange={(e) => setCardComment(e.target.value)}
         />
-        <button type="submit">Add Card</button>
+        <button className="btn" type="submit">Add Card</button>
+        <button className="btn2" type="submit">Add Card</button>
+      
       </form>
     </div>
   );
