@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# House of Cards Web Application!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to our web application: House of Cards. This project was made at the completion of phase 2, at Flatirons School by Brooke Ross and Christopher Dennis. After only 3 weeks of experience with React this project is filled with concepts that are fundamental to running a React app. 
 
-## Available Scripts
+## House of Cards Functionality
 
-In the project directory, you can run:
+Prior to running this app on your local device, you will need to download axios and react-router-dom:
+
+### `npm i axios --save`
+
+### `npm i react-router-dom`
+
+react-router-dom, must be version 5 to run! You can change this by going into your package.json and editing it to "^5"
+
+After downloading the above you will need to run your application and your db.json server. You can do so by setting them up on two separate localhosts:
+
+### `json-server -p 4000 db.json`
+
+In a second terminal run the following to start your application:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## More About our App?
 
-### `npm test`
+After 3 weeks of studying React, you will find multiple React elements used in this application! Navigate between three worlds by clicking on their franchise' iconic cards! Add, sort, and search through your collections as you build the biggest card collection that mankind has ever seen (or as much as our db.json server can hold)! Your additions will persist and upload to our db.json server so make sure that you add your information carefully!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This section has moved here: [link here](link again here)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
