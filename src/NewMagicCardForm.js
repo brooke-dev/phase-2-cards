@@ -4,7 +4,10 @@ function NewMagicCardForm({handleAddCard}) {
   const [cardName, setCardName] = useState("")
   const [cardImage, setCardImage] = useState("")
   const [cardComment, setCardComment] = useState("")
-  
+  const [magicNumber, setMagicNumber] = useState("")
+  const [typeLine, setTypeLine] = useState("")
+  const [expansionSymbol, setExpansionSymbol] = useState("")
+
   // console.log({ cardName, cardImage, cardComment })
 
   function handleSubmit(e) {
@@ -18,6 +21,10 @@ function NewMagicCardForm({handleAddCard}) {
             name: cardName,
             image: cardImage,
             comment: cardComment,
+            ["collector-number"]: magicNumber,
+            ["type-line"]: typeLine,
+            ["expansion-symbol"]: expansionSymbol,
+
         })
   })
   .then(r => r.json())
@@ -33,7 +40,16 @@ function NewMagicCardForm({handleAddCard}) {
         <input type="text" name="image" placeholder="Image URL" value={cardImage} 
         onChange={(e) => setCardImage(e.target.value)}
         />
-        <input type="text" name="comment" placeholder="Comment" value={cardComment}
+        <input type="text" name="collector-number" placeholder="Collector number" value={magicNumber} 
+        onChange={(e) => setMagicNumber(e.target.value)}
+        />
+        <input type="text" name="type-line" placeholder="Type line" value={typeLine} 
+        onChange={(e) => setTypeLine(e.target.value)}
+        />
+        <input type="text" name="expansion-symbol" placeholder="Expansion symbol" value={expansionSymbol}
+        onChange={(e) => setExpansionSymbol(e.target.value)}
+        />
+         <input type="text" name="comment" placeholder="Comment" value={cardComment}
         onChange={(e) => setCardComment(e.target.value)}
         />
         <button type="submit">Add Card</button>
