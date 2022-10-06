@@ -47,7 +47,7 @@ function Search({setRenderCheckedPokemonCards,
             value={searchBar}
             onChange={handleChangeSortBy}
             />
-            <button type="submit" className="submitButton">🔍</button>
+            
 
             {/* <label htmlFor="sort">Pokemon</label>
             <input id="sort"
