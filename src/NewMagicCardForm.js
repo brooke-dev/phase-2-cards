@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
-function NewCardForm({handleAddCard}) {
+function NewMagicCardForm({handleAddCard}) {
   const [cardName, setCardName] = useState("")
   const [cardImage, setCardImage] = useState("")
   const [cardComment, setCardComment] = useState("")
   
-  console.log({ cardName, cardImage, cardComment })
+  // console.log({ cardName, cardImage, cardComment })
 
   function handleSubmit(e) {
     e.preventDefault()
-    fetch("http://localhost:4000/Pokemon", {
+    fetch("http://localhost:4000/Magic-the-Gathering", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -21,7 +21,7 @@ function NewCardForm({handleAddCard}) {
         })
   })
   .then(r => r.json())
-  .then((newPokemonCard) => handleAddCard(newPokemonCard))
+  .then((newMagicCard) => handleAddCard(newMagicCard))
 }
   return (
     <div className="new-card-form">
@@ -37,11 +37,11 @@ function NewCardForm({handleAddCard}) {
         onChange={(e) => setCardComment(e.target.value)}
         />
         <button type="submit">Add Card</button>
-        <button className="btn2" type="submit">Add Card</button>
+        {/* <button className="btn2" type="submit">Add Card</button> */}
       
       </form>
     </div>
   );
 }
 
-export default NewCardForm;
+export default NewMagicCardForm;

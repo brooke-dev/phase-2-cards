@@ -7,12 +7,16 @@ import About from "./NavBarFolder/About.js"
 import Favorites from "./NavBarFolder/Favorites"
 import Home from "./NavBarFolder/Home"
 import Search from "./SearchFolder/Search"
-import NewCardForm from './NewCardForm';
+
 
 import AllCards from './AllCardsFolder/AllCards';
 import MagicCardContainer from "./AllCardsFolder/MagicFolder/MagicCardContainer.js";
 import PokemonCardContainer from "./AllCardsFolder/PokemonFolder/PokemonCardContainer";
 import YugiohCardContainer from "./AllCardsFolder/YugiohFolder/YugiohCardContainer"
+
+import NewPokemonCardForm from './NewPokemonCardForm';
+import NewYugiohCardForm from "./NewYugiohCardForm"
+import NewMagicCardForm from "./NewMagicCardForm"
 
 
 function App() {
@@ -123,11 +127,20 @@ function App() {
   ): filteredYugiohCards
 
 
-function handleAddCard(newPokemonCard) {
-  const newPokeArray = [...sortedPokemon, newPokemonCard]
-  setPokemon(newPokeArray)
-}
+  function handleAddCard(newPokemonCard) {
+    const newPokeArray = [...sortedPokemon, newPokemonCard]
+    setPokemon(newPokeArray)
+  }
 
+  function handleAddYugiohCard(newYugiohCard){
+    const newYugiohArray = [...sortedYugioh, newYugiohCard]
+    setYugioh(newYugiohArray)
+  }
+
+  function handleAddMagicCard(newMagicCard){
+    const newMagicArray = [...sortedMagic, newMagicCard]
+    setMagic(newMagicArray)
+  }
 
   return (
     <div className="App">
@@ -154,47 +167,84 @@ function handleAddCard(newPokemonCard) {
           <Switch>
             <Route path ="/Pokemon">
               <PokemonCardContainer 
-              pokemon={pokemon}
+              pokemon={sortedPokemon}
               renderCheckedPokemonCards={renderCheckedPokemonCards}
               />
+              <div>
+              <Search 
+              searchBar={searchBar} 
+              setSearchBar={setSearchBar} 
+              pokemonSort={pokemonSort}
+              setPokemonSort={setPokemonSort}
+              magicSort={magicSort}
+              setMagicSort={setMagicSort}
+              yugiohSort={yugiohSort}
+              setYugiohSort={setYugiohSort}
+              renderCheckedPokemonCards={renderCheckedPokemonCards}
+              setRenderCheckedPokemonCards={setRenderCheckedPokemonCards}
+              renderCheckedMagicCards={renderCheckedMagicCards}
+              setRenderCheckedMagicCards={setRenderCheckedMagicCards}
+              renderCheckedYugiohCards={renderCheckedYugiohCards}
+              setRenderCheckedYugiohCards={setRenderCheckedYugiohCards}
+              />
+              <NewPokemonCardForm handleAddCard={handleAddCard}/>
+              </div>
+              
+
+              
             </Route>
             <Route path="/Magic">
               <MagicCardContainer 
-              magic={magic}
+              magic={sortedMagic}
               renderCheckedMagicCards={renderCheckedMagicCards}
               />
+              <Search 
+              searchBar={searchBar} 
+              setSearchBar={setSearchBar} 
+              pokemonSort={pokemonSort}
+              setPokemonSort={setPokemonSort}
+              magicSort={magicSort}
+              setMagicSort={setMagicSort}
+              yugiohSort={yugiohSort}
+              setYugiohSort={setYugiohSort}
+              renderCheckedPokemonCards={renderCheckedPokemonCards}
+              setRenderCheckedPokemonCards={setRenderCheckedPokemonCards}
+              renderCheckedMagicCards={renderCheckedMagicCards}
+              setRenderCheckedMagicCards={setRenderCheckedMagicCards}
+              renderCheckedYugiohCards={renderCheckedYugiohCards}
+              setRenderCheckedYugiohCards={setRenderCheckedYugiohCards}
+              />
+              <NewMagicCardForm handleAddCard={handleAddMagicCard}/>
             </Route>
             <Route path="/YuGiOh">
               <YugiohCardContainer 
-              yugioh={yugioh}
+              yugioh={sortedYugioh}
               renderCheckedYugiohCards={renderCheckedYugiohCards}
               />
+              <Search 
+              searchBar={searchBar} 
+              setSearchBar={setSearchBar} 
+              pokemonSort={pokemonSort}
+              setPokemonSort={setPokemonSort}
+              magicSort={magicSort}
+              setMagicSort={setMagicSort}
+              yugiohSort={yugiohSort}
+              setYugiohSort={setYugiohSort}
+              renderCheckedPokemonCards={renderCheckedPokemonCards}
+              setRenderCheckedPokemonCards={setRenderCheckedPokemonCards}
+              renderCheckedMagicCards={renderCheckedMagicCards}
+              setRenderCheckedMagicCards={setRenderCheckedMagicCards}
+              renderCheckedYugiohCards={renderCheckedYugiohCards}
+              setRenderCheckedYugiohCards={setRenderCheckedYugiohCards}
+              />
+              <NewYugiohCardForm handleAddCard={handleAddYugiohCard} />
             </Route>
-            <Route path ="*">
+            {/* <Route path ="*">
               <h1>404 not found</h1>
-            </Route>
+            </Route> */}
           </Switch>
         </div>
-      
-        <NewCardForm handleAddCard={handleAddCard}/>
-        
-        <Search 
-          searchBar={searchBar} 
-          setSearchBar={setSearchBar} 
-          pokemonSort={pokemonSort}
-          setPokemonSort={setPokemonSort}
-          magicSort={magicSort}
-          setMagicSort={setMagicSort}
-          yugiohSort={yugiohSort}
-          setYugiohSort={setYugiohSort}
-          renderCheckedPokemonCards={renderCheckedPokemonCards}
-          setRenderCheckedPokemonCards={setRenderCheckedPokemonCards}
-          renderCheckedMagicCards={renderCheckedMagicCards}
-          setRenderCheckedMagicCards={setRenderCheckedMagicCards}
-          renderCheckedYugiohCards={renderCheckedYugiohCards}
-          setRenderCheckedYugiohCards={setRenderCheckedYugiohCards}
-         
-          />
+  
       </div>
 
     </div>
