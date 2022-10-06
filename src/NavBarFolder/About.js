@@ -15,7 +15,7 @@ function About(){
                 collection that mankind has ever seen (or as much as our db.json server can hold)!
             </p>
             <p>
-                We are just a group of software engineers, excited to forge our paths into the world of tech. Thank you for checking out our hosted site. Find our linkedIn's below
+                We are just a group of software engineers, excited to forge our paths into the world of tech. Thank you for checking out our hosted site. Find our LinkedIn's below
                 if you are interested in connecting!
             </p>
             <div>
