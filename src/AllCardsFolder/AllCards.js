@@ -5,14 +5,14 @@ import {NavLink} from "react-router-dom";
 function AllCards(){
     return (
         <div>
-            <NavLink exact to="/Pokemon">
-               <button className="btn2">Pokemon</button>
+            <NavLink exact to="/Pokemon" className="pokemonLink">
+               <button className="pokemonBtn">Pokemon</button>
             </NavLink>
-            <NavLink to="/Yugioh">
-                <button className="btn">Yu-Gi-Oh</button>
+            <NavLink to="/Yugioh" className="yugiohLink">
+                <button className="yugiohBtn">Yu-Gi-Oh</button>
             </NavLink>
-           <NavLink to="/Magic">
-                <button className="btn">Magic The Gathering</button>
+           <NavLink to="/Magic" className="magicLink">
+                <button className="magicBtn">Magic The Gathering</button>
            </NavLink>
             
         </div>

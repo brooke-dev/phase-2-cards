@@ -17,7 +17,7 @@ function PokemonCardContainer({pokemon}){
 
     return (
 
-        <div className="cards"> 
+        <div className="pokemonCards"> 
            {renderPokemonCards}
         </div>
             

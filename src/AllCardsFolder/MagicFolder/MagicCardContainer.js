@@ -15,7 +15,7 @@ function MagicCardContainer({magic}){
     ))
 
     return(
-        <div className= "cards">
+        <div className= "magicCards">
             {renderMagicCards}
         </div>
         
