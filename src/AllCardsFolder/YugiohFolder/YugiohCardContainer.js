@@ -10,6 +10,8 @@ function YugiohCardContainer({yugioh}){
         name={oneYugioh.name}
         image={oneYugioh.image}
         comment={oneYugioh.comment}
+        cardType={oneYugioh["card-type"]}
+        cardRarity={oneYugioh["card-rarity"]}
         
         />
     ))

@@ -10,6 +10,9 @@ function MagicCardContainer({magic}){
         name={oneMagic.name}
         image={oneMagic.image}
         comment={oneMagic.comment}
+        collectorNumber={oneMagic["collector-number"]}
+        typeLine={oneMagic["type-line"]}
+        expansionSymbol={oneMagic["expansion-symbol"]}
         
         />
     ))

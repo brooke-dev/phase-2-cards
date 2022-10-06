@@ -12,6 +12,9 @@ function PokemonCardContainer({pokemon}){
         name={onePokemon.name}
         image={onePokemon.image}
         comment={onePokemon.comment}
+        pokedexNo={onePokemon["pokedex-no"]}
+        pokemonType={onePokemon["pokemon-type"]}
+        cardRarity={onePokemon["card-rarity"]}
         />
     ))
 
