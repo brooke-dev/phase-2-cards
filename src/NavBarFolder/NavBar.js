@@ -16,9 +16,9 @@ function NavBar(){
             <NavLink className="buttonAbout" to="/about">
                 About
             </NavLink>
-            <NavLink className="buttonFav" to="/favorites">
+            {/* <NavLink className="buttonFav" to="/favorites">
                 Favorites
-            </NavLink>
+            </NavLink> */}
       
             
         </header>

@@ -1,30 +1,20 @@
 import React from "react";
-import PokemonCardContainer from "./PokemonFolder/PokemonCardContainer";
-import YugiohCardContainer from "./YugiohFolder/YugiohCardContainer";
-import MagicCardContainer from "./MagicFolder/MagicCardContainer";
+import {NavLink} from "react-router-dom";
 
-function AllCards(
-    {pokemon,
-    magic,
-    yugioh,
-    renderCheckedPokemonCards,
-    renderCheckedMagicCards,
-    renderCheckedYugiohCards}
-){
+
+function AllCards(){
     return (
         <div>
-            <PokemonCardContainer 
-            pokemon={pokemon} 
-            renderCheckedPokemonCards={renderCheckedPokemonCards}
-            />
-            <YugiohCardContainer 
-            yugioh={yugioh}
-            renderCheckedYugiohCards={renderCheckedYugiohCards}
-            />
-            <MagicCardContainer 
-            magic={magic}
-            renderCheckedMagicCards={renderCheckedMagicCards}
-            />  
+            <NavLink exact to="/Pokemon">
+               <button className="btn2">Pokemon</button>
+            </NavLink>
+            <NavLink to="/Yugioh">
+                <button className="btn">Yu-Gi-Oh</button>
+            </NavLink>
+           <NavLink to="/Magic">
+                <button className="btn">Magic The Gathering</button>
+           </NavLink>
+            
         </div>
         
     )
