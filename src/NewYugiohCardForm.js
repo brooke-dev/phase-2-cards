@@ -47,7 +47,7 @@ function NewYugiohCardForm({handleAddCard}) {
         onChange={(e) => setCardComment(e.target.value)}
         />
         
-        <button type="submit">Add Card</button>
+        <button type="submit" className="submitButton">Add Card</button>
         {/* <button className="btn2" type="submit">Add Card</button> */}
       
       </form>

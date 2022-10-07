@@ -1,36 +1,17 @@
 .App-header {
   background-color: rgb(255, 255, 255);
   min-height: 10vh;
+  display:flex;
+  justify-content: center;
+  text-align: left;
+  margin: 0 auto;
+  padding: 20px;
+
   
   color: rgb(0, 0, 0);
   padding-bottom: 200px;
 }
 
-/* .App {
-  text-align: center;
-  font-family: 'Lucida Console'
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
 
 :root {
   --turquoise: red;
@@ -68,6 +49,20 @@ body {
   color: var(--color);
   background-color: var(--background);
   min-height: 100vh;
+  max-width: 1600px;
+
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height:100vw;
+}
+
+.all-cards{
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin-top:50px;
 }
 
 .App.light {
@@ -84,7 +79,7 @@ section {
 }
 
 /* buttons */
-button, .buttonHome, .buttonAbout, .buttonFav {
+button, .buttonHome, .buttonAbout {
   appearance: auto;
   padding: 0.5rem 0.75rem;
   border: none;
@@ -144,10 +139,6 @@ button.blue:hover,
   left:22%
 }
 
-.buttonFav{
-  position:absolute;
-  right:50%
-}
 
 /* links */
 a {
@@ -164,17 +155,11 @@ a:hover {
 /* header */
 header {
   padding: 1rem;
-  /* display: flex; */
+  display: flex;
   justify-content: space-between;
   align-content: center;
 }
 
-/* .logo {
-  color: var(--turquoise);
-  font-size: 1.25em;
-  font-family: Helvetica;
-  margin-right: 0.5rem;
-} */
 
 /* forms */
 .form {
@@ -227,86 +212,7 @@ select:focus {
   margin: 0 0.5rem;
 }
 
-/* cards */
-/*.cards {
-  margin: 0 auto;
-  list-style: none;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
 
-.card {
-  max-width: 400px;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  border: 2px solid var(--dark-turquoise);
-}
-
-@media screen and (max-width: 588px) {
-  .card {
-    display: block;
-    max-width: inherit;
-  }
-}
-
-.card .image {
-  max-height: 200px;
-  overflow: hidden;
-  position: relative;
-}
-
-.card .image img {
-  width: 100%;
-  height: 175px;
-  object-fit: cover;
-}
-
-.card > a {
-  border-bottom: none;
-}
-
-.card > a:hover {
-  border-bottom: none;
-  background-color: transparent;
-}
-
-.card .image .claps {
-  color: transparent;
-  text-shadow: 0 0 0 var(--primary);
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-.card .image .claps:focus,
-.card .image .claps:hover {
-  color: transparent;
-  text-shadow: 0 0 0 var(--background);
-}
-
-.card .details {
-  margin: 0.5rem;
-}
-
-.card .details h4 {
-  margin: 0.5rem 0;
-}
-
-.card .details p {
-  margin: 0.5rem 0;
-}
-
-.card .extra {
-  margin: 0.5rem;
-}
-
-.card .extra {
-  display: flex;
-  justify-content: space-between;
-}
-*/
 .manage .button, .manage button {
   margin-left: 0.25em;
 }
@@ -329,53 +235,6 @@ select:focus {
   padding: 1.75rem;
 }
 
-nav {
-  padding: 1rem;
-  /* display: flex; */
-  justify-content: space-between;
-  align-content: center;
-}
-
-
-
-/* .navigation * {
-  margin: 0 0.5rem;
-}
-
-.branding {
-  display: flex;
-}
-
-header h1 a {
-  border-bottom: none;
-  display: flex;
-  align-items: center;
-}
-
-header h1 a:hover {
-  border-bottom: none;
-  background-color: transparent;
-} */
-
-/* .logo {
-  color: var(--turquoise);
-  font-size: 1.25em;
-  font-family: Helvetica;
-  margin-right: 0.5rem;
-}
-
-.project-image img {
-  width: 100%;
-  max-width: 1000px;
-  display: block;
-  margin-bottom: 2rem;
-}
-
-.about {
-  max-width: 800px;
-  margin: 0 auto;
-} */
-
 
 .pokemonCards, .magicCards, .yugiohCards {
   margin: 0 auto;
@@ -383,7 +242,9 @@ header h1 a:hover {
   display: grid;
   grid-template-columns: repeat(3, 333px);
   gap: 20px;
-  position: relative; top: 700px;
+  position: relative; 
+  top: 200px;
+  left:-150px;
 }
 
 .card__image {
@@ -397,18 +258,24 @@ header h1 a:hover {
   
 }
 
-.about, .favs, .home{
-  position:relative; top: 45px;
+.about, .home{
+  position:relative; 
+  top: 45px;
+  /* margin-top: 50px; */
 }
 
 
 .searchbar{
-  position: absolute; top: 700px; 
+  position: absolute; 
+  top:800px; 
   text-align: center;
   margin-left: 32%;
+  left: 0px;
 }
 .submitButton{
-  position: absolute; left: 280px; top: 8px
+  position: absolute; 
+  left: 240px; 
+  top: 210px
 }
 
 #search {
@@ -420,18 +287,18 @@ header h1 a:hover {
 
 .new-card-form {
   position:absolute; 
-  
   top: 70%;
   left: 57%;
   transform: translate(-50%,-50%);
   
-    /* transform: translate(-50%, -50%); */
+  transform: translate(-50%, -50%);
   display: inline; 
   max-width: 1200px;
 }
   .subBtn {
     
-    position: absolute; top: 160px;
+    position: absolute; 
+    top: 160px;
   }
 
 
@@ -439,10 +306,10 @@ header h1 a:hover {
 .yugiohBtn {
   background: url("https://crystal-cdn3.crystalcommerce.com/photos/6476657/large/cardback.jpg");
   background-size: cover;
-  position: relative; 
+  /* position: relative;  */
   background-position: center;
   width:210px;
-  height:299px
+  height:300px
 }
 
 .yugiohLink {
@@ -454,7 +321,8 @@ header h1 a:hover {
 .pokemonBtn {
   background: url("https://archives.bulbagarden.net/media/upload/1/17/Cardback.jpg");
   background-size: cover;
-  position: relative; top: 10px;
+  /* position: relative;  */
+  /* top: 10px; */
   background-position: center;
   width:210px;
   height: 300px;
@@ -469,7 +337,8 @@ header h1 a:hover {
 .magicBtn {
   background: url("https://preview.redd.it/fr7g5swymhc41.png?width=640&crop=smart&auto=webp&s=930c8edaa0acc0755c71c3d737840d08a9e9a0b0");
   background-size: cover;
-  position: relative; bottom: 10px;
+  position: relative; 
+  bottom: 10px;
   background-position: center;
   width:210px;
   height: 300px;
@@ -478,11 +347,9 @@ header h1 a:hover {
 .magicLink {
 
   position:absolute;
- top: 29%;
- left:70%
-  
-
-  position: relative; left: 65%; top: 70%
+  top: 29%;
+  left:70%;
+  /* position: relative; left: 65%; top: 70% */
 }
 
 .logo{
@@ -490,5 +357,20 @@ header h1 a:hover {
   top:0;
   right:0;
   width:5%;
-
 }
+
+.sort{
+  position: absolute;
+  top: 800px;
+  right:500px;
+}
+
+
+
+/* .display-details{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+
+} */

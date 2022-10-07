@@ -8,7 +8,7 @@ function PokemonSort({pokemonSort,setPokemonSort}){
 
     return (
         
-        <form className="pokedex">
+        <form className="sort">
         <label htmlFor="sort">Pokedex Number!</label>
             <input id="sort"
             type="checkbox"
