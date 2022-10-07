@@ -7,7 +7,7 @@ function YugiohSort({yugiohSort, setYugiohSort}){
        }
 
     return (   
-        <form className="yugioh-card-type">
+        <form className="sort">
         <label htmlFor="sort">Card Type</label>
             <input id="sort"
             type="checkbox"

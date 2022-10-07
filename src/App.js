@@ -139,11 +139,9 @@ function App() {
   return (
     
     <div className="App">
-      
+
+      <NavBar />
       <header className="App-header">
-       
-         <nav>
-        <NavBar />
         <img className="logo" src= {logo2} alt="logo!"/> 
         <Switch>
           <Route path = "/about">
@@ -156,13 +154,14 @@ function App() {
             <h1>404 not found</h1>
           </Route>
         </Switch>
-      </nav>
+
       </header>
 
-      <div>
-        <div>
+      <div className="all-cards">
         <AllCards/>
           <Switch>
+
+            {/* <div className="display-details"> */}
             <Route path ="/Pokemon">
               <PokemonCardContainer 
               pokemon={sortedPokemon}
@@ -174,10 +173,11 @@ function App() {
               />
               <PokemonSort pokemonSort={pokemonSort} setPokemonSort={setPokemonSort} />
               <NewPokemonCardForm handleAddCard={handleAddCard}/>             
-
-              
+             
             </Route>
+            {/* </div> */}
 
+            {/* <div className="display-details"> */}
             <Route path="/Magic">
               <MagicCardContainer 
               magic={sortedMagic}
@@ -189,7 +189,9 @@ function App() {
               <MagicSort magicSort={magicSort} setMagicSort={setMagicSort} />
               <NewMagicCardForm handleAddCard={handleAddMagicCard}/>
             </Route>
+            {/* </div> */}
 
+            {/* <div className="display-details"> */}
             <Route path="/YuGiOh">
               <YugiohCardContainer 
               yugioh={sortedYugioh}
@@ -201,8 +203,8 @@ function App() {
               <YugiohSort yugiohSort={yugiohSort} setYugiohSort={setYugiohSort} />
               <NewYugiohCardForm handleAddCard={handleAddYugiohCard} />
             </Route>
+            {/* </div> */}
           </Switch>
-        </div>
   
       </div>
 

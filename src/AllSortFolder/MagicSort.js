@@ -9,7 +9,7 @@ function MagicSort({magicSort, setMagicSort}){
 
 
     return (
-        <form className="Magic-Expansion-Symbol">
+        <form className="sort">
         <label htmlFor="sort">Expansion Symbol!</label>
             <input id="sort"
             type="checkbox"
