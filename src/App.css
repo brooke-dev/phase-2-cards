@@ -247,6 +247,8 @@ select:focus {
   position: relative; 
   top: 200px;
   left:-150px;
+  border: 10px;
+  border-color: black;
 }
 
 .card__image {
