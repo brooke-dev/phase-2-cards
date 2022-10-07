@@ -21,9 +21,9 @@ function NewMagicCardForm({handleAddCard}) {
             name: cardName,
             image: cardImage,
             comment: cardComment,
-            ["collector-number"]: magicNumber,
-            ["type-line"]: typeLine,
-            ["expansion-symbol"]: expansionSymbol,
+            [`collector-number`]: magicNumber,
+            [`type-line`]: typeLine,
+            [`expansion-symbol`]: expansionSymbol,
 
         })
   })

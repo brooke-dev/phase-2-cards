@@ -81,7 +81,7 @@ function App() {
   const sortedPokemon= pokemonSort ? [...filteredPokemonCards].sort(
     (pokemonA,pokemonB)=>{
       return (
-        pokemonA["pokedex-no"]-pokemonB["pokedex-no"]
+        pokemonA[`pokedex-no`]-pokemonB[`pokedex-no`]
       )
       
     }
@@ -99,7 +99,7 @@ function App() {
 
   const sortedMagic= magicSort ? [...filteredMagicCards].sort(
     (magicA,magicB)=>{
-      return magicA["expansion-symbol"]-magicB["expansion-symbol"]
+      return magicA[`expansion-symbol`]-magicB[`expansion-symbol`]
     }
   ): filteredMagicCards
 
@@ -115,7 +115,7 @@ function App() {
 
   const sortedYugioh= yugiohSort ? [...filteredYugiohCards].sort(
     (yugiohA,yugiohB)=>{
-      return yugiohA["card-type"]-yugiohB["card-type"]
+      return yugiohA[`card-type`]-yugiohB[`card-type`]
     }
   ): filteredYugiohCards
 

@@ -8,7 +8,7 @@ function NewPokemonCardForm({handleAddCard}) {
   const [cardType, setCardType] = useState("")
   const [cardRarity, setCardRarity] = useState("")
   
-   console.log({ cardRarity, cardImage, cardComment })
+   console.log({ pokeNumber })
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -21,9 +21,9 @@ function NewPokemonCardForm({handleAddCard}) {
             name: cardName,
             image: cardImage,
             comment: cardComment,
-            ["pokedex-number"]: pokeNumber,
-            ["pokemon-type"]: cardType,
-            ["card-rarity"]: cardRarity,
+            [`pokedex-no`]: pokeNumber,
+            [`pokemon-type`]: cardType,
+            [`card-rarity`]: cardRarity,
 
         })
   })
