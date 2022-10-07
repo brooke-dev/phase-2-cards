@@ -22,7 +22,6 @@ import PokemonSort from "./AllSortFolder/PokemonSort"
 import MagicSort from "./AllSortFolder/MagicSort"
 import YugiohSort from "./AllSortFolder/YugiohSort"
 
-import logo from "./logoHouse.png"
 import logo2 from "./2.png"
 
 
@@ -82,7 +81,7 @@ function App() {
   const sortedPokemon= pokemonSort ? [...filteredPokemonCards].sort(
     (pokemonA,pokemonB)=>{
       return (
-        pokemonA["pokedex-no"]-pokemonB["pokedex-no"]
+        pokemonA[`pokedex-no`]-pokemonB[`pokedex-no`]
       )
       
     }
@@ -100,7 +99,7 @@ function App() {
 
   const sortedMagic= magicSort ? [...filteredMagicCards].sort(
     (magicA,magicB)=>{
-      return magicA["expansion-symbol"]-magicB["expansion-symbol"]
+      return magicA[`expansion-symbol`]-magicB[`expansion-symbol`]
     }
   ): filteredMagicCards
 
@@ -116,7 +115,7 @@ function App() {
 
   const sortedYugioh= yugiohSort ? [...filteredYugiohCards].sort(
     (yugiohA,yugiohB)=>{
-      return yugiohA["card-type"]-yugiohB["card-type"]
+      return yugiohA[`card-type`]-yugiohB[`card-type`]
     }
   ): filteredYugiohCards
 
@@ -161,7 +160,6 @@ function App() {
         <AllCards/>
           <Switch>
 
-            {/* <div className="display-details"> */}
             <Route path ="/Pokemon">
               <PokemonCardContainer 
               pokemon={sortedPokemon}
@@ -175,9 +173,7 @@ function App() {
               <NewPokemonCardForm handleAddCard={handleAddCard}/>             
              
             </Route>
-            {/* </div> */}
 
-            {/* <div className="display-details"> */}
             <Route path="/Magic">
               <MagicCardContainer 
               magic={sortedMagic}
@@ -189,9 +185,7 @@ function App() {
               <MagicSort magicSort={magicSort} setMagicSort={setMagicSort} />
               <NewMagicCardForm handleAddCard={handleAddMagicCard}/>
             </Route>
-            {/* </div> */}
-
-            {/* <div className="display-details"> */}
+       
             <Route path="/YuGiOh">
               <YugiohCardContainer 
               yugioh={sortedYugioh}
@@ -203,7 +197,7 @@ function App() {
               <YugiohSort yugiohSort={yugiohSort} setYugiohSort={setYugiohSort} />
               <NewYugiohCardForm handleAddCard={handleAddYugiohCard} />
             </Route>
-            {/* </div> */}
+         
           </Switch>
   
       </div>

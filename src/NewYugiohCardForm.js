@@ -20,8 +20,8 @@ function NewYugiohCardForm({handleAddCard}) {
             name: cardName,
             image: cardImage,
             comment: cardComment,
-            ["card-type"]: cardType,
-            ["card-rarity"]: cardRarity,
+            [`card-type`]: cardType,
+            [`card-rarity`]: cardRarity,
         })
   })
   .then(r => r.json())

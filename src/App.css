@@ -1,5 +1,5 @@
 .App-header {
-  background-color: rgb(255, 255, 255);
+  background-color:rgb(201, 13, 13) ;
   min-height: 10vh;
   display:flex;
   justify-content: center;
@@ -14,11 +14,11 @@
 
 
 :root {
-  --turquoise: red;
+  --white: white;
   --mid-turquoise: #14d5c9;
   --dark-turquoise: #046d85;
-  --black: white;
-  --white: black;
+  --red: rgb(201, 13, 13);
+  --black: black;
   --grey: #d6e2e7;
   --dark-grey: #7f8a8e;
   --yellow: #f9c51a;
@@ -28,9 +28,9 @@
   --blue-dark: #145cb3;
   --purple: #cda2ff;
   --green: #00ef7c;
-  --color: var(--white);
-  --background: var(--black);
-  --primary: var(--turquoise);
+  --color: var(--black);
+  --background: var(--red);
+  --primary: var(-white);
 }
 * {
   padding: 0;
@@ -55,6 +55,8 @@ body {
   justify-content: center;
   width: 100vw;
   height:100vw;
+  /* border: 100px;
+  border-color: black; */
 }
 
 .all-cards{
@@ -66,7 +68,7 @@ body {
 }
 
 .App.light {
-  --color: var(--black);
+  --color: var(-red);
   --background: var(--white);
   --primary: var(--dark-turquoise);
 }
@@ -125,7 +127,7 @@ button.blue:hover,
 .button.blue.active,
 .button.blue:focus,
 .button.blue:hover {
-  color: var(--white);
+  color: var(--black);
   background-color: var(--blue);
   border: 2px solid var(--blue);
 }
@@ -245,6 +247,8 @@ select:focus {
   position: relative; 
   top: 200px;
   left:-150px;
+  border: 10px;
+  border-color: black;
 }
 
 .card__image {
