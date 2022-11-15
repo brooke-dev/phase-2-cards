@@ -29,6 +29,15 @@
       "comment": "Chris Dennis' favorite Gen 1 starter",
       "pokemon-type": "Water",
       "card-rarity": "common"
+    },
+    {
+      "name": "New Card",
+      "image": "https://i.pinimg.com/originals/38/63/b3/3863b3b0eef1d377a59adfbf3918346e.png",
+      "comment": "wow!",
+      "pokedex-no": "009",
+      "pokemon-type": "fire",
+      "card-rarity": "rare",
+      "id": 4
     }
   ],
   "Magic-the-Gathering": [

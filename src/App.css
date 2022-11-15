@@ -1,5 +1,5 @@
 .App-header {
-  background-color:rgb(201, 13, 13) ;
+  background-color:rgb(255, 255, 255) ;
   min-height: 10vh;
   display:flex;
   justify-content: center;
@@ -17,7 +17,7 @@
   --white: white;
   --mid-turquoise: #14d5c9;
   --dark-turquoise: #046d85;
-  --red: rgb(201, 13, 13);
+  --red: rgb(255, 255, 255);
   --black: black;
   --grey: #d6e2e7;
   --dark-grey: #7f8a8e;
@@ -310,7 +310,6 @@ select:focus {
 .yugiohBtn {
   background: url("https://crystal-cdn3.crystalcommerce.com/photos/6476657/large/cardback.jpg");
   background-size: cover;
-  /* position: relative;  */
   background-position: center;
   width:210px;
   height:300px
@@ -323,10 +322,8 @@ select:focus {
 }
 
 .pokemonBtn {
-  background: url("https://archives.bulbagarden.net/media/upload/1/17/Cardback.jpg");
+  background: url("https://i.pinimg.com/originals/38/63/b3/3863b3b0eef1d377a59adfbf3918346e.png");
   background-size: cover;
-  /* position: relative;  */
-  /* top: 10px; */
   background-position: center;
   width:210px;
   height: 300px;
