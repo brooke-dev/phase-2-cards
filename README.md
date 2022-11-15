@@ -26,7 +26,5 @@ In a second terminal run the following to start your application:
 After 3 weeks of studying React, you will find multiple React elements used in this application! Navigate between three worlds by clicking on their franchise' iconic cards! Add, sort, and search through your collections as you build the biggest card collection that mankind has ever seen (or as much as our db.json server can hold)! Your additions will persist and upload to our db.json server so make sure that you add your information carefully!
 
 
-### Deployment
 
-This section has moved here: [link here](link again here)
 
